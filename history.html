@@ -1,0 +1,16 @@
+<h2>Order History</h2>
+<div id="his"></div>
+
+<script>
+let h = JSON.parse(localStorage.getItem("history")) || [];
+let html="";
+h.forEach(o=>{
+  html+=`
+  <div>
+    <b>${o.date}</b><br>
+    ${o.payment} - $${o.total}
+    <hr>
+  </div>`;
+});
+document.getElementById("his").innerHTML=html;
+</script>

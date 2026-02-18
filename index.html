@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Khmer Shopping</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!---->
+    <header class="top-bar">
+        <img src="image/images.logo.jpg" class="logo">
+        <div class="search-header">
+            <input type="text" id="search" placeholder="Search products...">
+            <button class="icon-btn" onclick="searchProduct()">🔍</button>
+        </div>
+
+        <div class="cart-btn">
+
+            🛒 <span id="count">0</span> | $<span id="total">0</span>
+        </div>
+        <div class="menu">
+
+            <button onclick="filter('food')">Foods</button>
+            <button onclick="filter('car')">Cars</button>
+            <button onclick="filter('phone')">Phones</button>
+            <button onclick="filter('computer')">Computers</button>
+            <button onclick="filter('smart watches')">Smart Watches</button>
+            <button onclick="filter('all')">All</button>
+        </div>
+    </header>
+
+
+
+    <div class="products" id="products"></div>
+
+    <button class="checkout" onclick="checkout()">Checkout</button>
+    <div id="products"></div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+    <div class="nav-item active" onclick="goHome()">
+        🏠
+        <span>Home</span>
+    </div>
+
+    <div class="nav-item" onclick="goSearch()">
+        🔍
+        <span>Search</span>
+    </div>
+
+    <div class="nav-item cart" onclick="goCart()">
+        🛒
+        <span>Cart</span>
+        <b id="cartCount">0</b>
+    </div>
+
+    <div class="nav-item" onclick="goAccount()">
+        👤
+        <span>Account</span>
+    </div>
+</div>

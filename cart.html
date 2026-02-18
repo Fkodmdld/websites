@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <button class="back" onclick="history.back()">←</button>
+        <h3>Shopping Cart</h3>
+    </div>
+
+    <!-- Select All -->
+    <div class="select-all">
+        <label>
+    <input type="checkbox" id="checkAll" onchange="toggleAll(this)">
+    Select All
+  </label>
+    </div>
+
+    <!-- Cart List -->
+    <div id="cartList" class="cart-list"></div>
+
+    <!-- Bottom Checkout -->
+    <div class="checkout-bar">
+        <div class="total">
+            <small>Total</small>
+            <h2>$<span id="total">0</span></h2>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

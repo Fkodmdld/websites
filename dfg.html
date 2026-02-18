@@ -1,0 +1,38 @@
+<style>
+.menu {
+  position: fixed;      /* ជាប់រហូតនៅលើទំព័រ */
+  top: 0;               /* ជាប់ក្បែរខាងលើ */
+  left: 0;              /* ជាប់ឆ្វេង */
+  width: 100%;          /* ប្រើទាំងទំព័រ */
+  background-color: #fff; /* ផ្ទៃខាងក្រោយស ពន្លឺ */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* shadow សម្រាប់មើលកាន់តែច្បាស់ */
+  z-index: 1000;        /* ឲ្យ menu នៅលើ content ផ្សេងៗ */
+  display: flex;
+  justify-content: center; /* រៀប button នៅកណ្ដាល */
+  gap: 10px;              /* ចន្លោះ button */
+}
+
+.menu button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+  
+/* បន្ថែម margin-top ទៅ content ផ្នែកក្រោម ដើម្បីមិនឆ្លង menu */
+body {
+  margin-top: 60px; /* ត្រូវ adjust ទំហំអោយសម */
+}
+</style>
+
+<div class="menu"> 
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('food')">Foods</button>
+  <button onclick="filter('car')">Cars</button>
+  <button onclick="filter('phone')">Phones</button>
+</div>
+
+<div class="content">
+  <!-- Content ផ្សេងៗ scroll បាន -->
+  <p>Lorem ipsum dolor sit amet...</p>
+  <p>...</p>
+</div>
