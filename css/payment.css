@@ -1,0 +1,136 @@
+/* ===== 2026 Base Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #0f172a;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+
+/* ===== 2026 Glass Container ===== */
+
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 40px;
+    border-radius: 28px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: 0.4s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+
+/* ===== 2026 Gradient Buttons ===== */
+
+button {
+    margin: 12px 6px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* ===== Smooth List ===== */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+ul li {
+    padding: 10px 0;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+
+/* ===== Hidden Utility ===== */
+
+.hidden {
+    display: none;
+}
+
+
+/* ===== Premium Dark Mode 2026 ===== */
+
+body.dark {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+    color: #f8fafc;
+}
+
+body.dark .container {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark button {
+    background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+}
+
+body.dark button:hover {
+    box-shadow: 0 15px 35px rgba(34, 211, 238, 0.5);
+}
+
+
+/* ===== Smooth Fade Animation ===== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.6s ease;
+}
